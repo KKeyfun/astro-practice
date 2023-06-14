@@ -1,10 +1,22 @@
+---
+import Hamburger from './Hamburger.astro';
+---
+
 <nav class="Nav">
-    <a href="/">Home</a>
-    <a href="/about">About Us</a>
-    <a href="/blog">Blog</a>
+    <script>
+        import '../scripts/menu.js';
+    </script>
+    <Hamburger />
+    <div class="links">
+        <a href="/">Home</a>
+        <a href="/about">About Us</a>
+        <a href="/blog">Blog</a>
+    </div>
+
     <!-- <a href="/">Home</a> -->
     <!-- <a href="/">Home</a> -->
 </nav>
+
 <style>
     .Nav {
         background-color: #e09eff;
@@ -18,5 +30,16 @@
         color:white;
         font-size: 1.25rem;
         margin-left: 1rem;
+    }
+
+    @media (max-width:626px){
+        .links {
+            display: none;
+        }
+
+        .links.visible {
+            display: flex;
+            flex-direction: column;
+        }
     }
 </style>

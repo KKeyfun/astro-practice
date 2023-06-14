@@ -1,0 +1,12 @@
+---
+const { platform, username } = Astro.props;
+---
+<a class='Socials' href={`https://www.${platform}.com/${username}`}>{'>My ' + platform + '<'}</a>
+
+<style>
+    .Socials {
+        text-transform: capitalize;
+        text-decoration: none;
+        color: orange;
+    }
+</style>
