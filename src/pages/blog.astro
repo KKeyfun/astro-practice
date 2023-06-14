@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Lorem from '../components/Lorem.astro';
+import Nav from '../components/Nav.astro';
+import Post from '../components/Post.astro';
+---
+
+<Layout title="Blog">
+	<body>
+        <Nav />
+		<h1><span class="text-gradient">Astro Tutorial - Blog</span></h1>
+        <h2>This is a blog made with astro</h2>
+        <Post title="First Post"/>
+        <ul>
+            <li><a href="/posts/post2">Post 2</a></li>
+            <li><a href="/posts/post3">Post 3</a></li>
+            <li><a href="/posts/post4">Post 4</a></li>
+        </ul>
+	</body>
+</Layout>
+
+<style>
+    ul {
+        list-style: none;
+    }
+    a {
+        color: blue;
+        text-decoration: none;
+    }
+</style>
