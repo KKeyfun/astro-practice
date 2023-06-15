@@ -1,21 +1,23 @@
 ---
 import Lorem from './Lorem.astro';
 export interface Props {
-    title?: string,
-    body?: string,
+    title: string,
+    url: string,
 }
 
-const { title,body } = Astro.props;
+const { title,url } = Astro.props;
 ---
 
-<div class="Blog__Post">
-    <h3 class="Post__Title">{title || 'Post'}</h3>
-    <p>{body || <Lorem/>}</p>
-</div>
+<li class="Blog__Post">
+    <a href={url}>{title}</a>
+</li>
+
+
 
 <style>
     .Blog__Post {
         border: 1px solid black;
         margin-bottom: 1rem;
+        list-style: none;
     }
 </style>
